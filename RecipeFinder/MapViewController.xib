@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="RecipeFinder" customModuleProvider="target">
+            <connections>
+                <outlet property="map" destination="7GB-YZ-WMo" id="XUm-Jp-XvL"/>
+                <outlet property="switchMapType" destination="LP4-hO-FZy" id="zjh-IE-Jtk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7GB-YZ-WMo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </mapView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LP4-hO-FZy">
+                    <rect key="frame" x="91" y="36" width="192" height="29"/>
+                    <segments>
+                        <segment title="Standart"/>
+                        <segment title="Satellite"/>
+                        <segment title="Hybrid"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentedControlTypeDidChange:" destination="-1" eventType="valueChanged" id="NW3-kc-YJX"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7GB-YZ-WMo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KDg-fu-4Ez"/>
+                <constraint firstItem="7GB-YZ-WMo" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Ng2-sg-ujS"/>
+                <constraint firstItem="LP4-hO-FZy" firstAttribute="centerX" secondItem="7GB-YZ-WMo" secondAttribute="centerX" id="QLV-NT-1Ig"/>
+                <constraint firstItem="LP4-hO-FZy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="91" id="QPL-Du-hr0"/>
+                <constraint firstItem="LP4-hO-FZy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="e7C-5H-9l0"/>
+                <constraint firstItem="7GB-YZ-WMo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="na3-uq-PtU"/>
+                <constraint firstItem="LP4-hO-FZy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="qGN-3M-qct"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
